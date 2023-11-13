@@ -20,6 +20,9 @@ class BotHandler {
             this.bot.processUpdate(req.body);
             res.sendStatus(200);
         });
+        this.app.get(`/`, (req, res) => {
+            res.send("Simple Webhook API")
+        });
 
         this.app.listen(this.port, () => {
             console.log(`Express server is listening on ${this.port}`);
