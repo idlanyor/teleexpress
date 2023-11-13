@@ -1,5 +1,5 @@
 const { menu } = require('../libs/menu.js');
-const { ApiHelper } = require('../Helper/ApiHelper');
+const { ApiHelper } = require('../helper/ApiHelper.js');
 const { Islami } = require('../command/Islami.js');
 const { Pddikti } = require('../command/Pddikti.js');
 const { Downloader } = require('../command/Downloader.js');
