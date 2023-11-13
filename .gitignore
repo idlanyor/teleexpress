@@ -1,6 +1,5 @@
 .vercel
 node_modules
-.env
 utils
 command/downloader
 command/general
