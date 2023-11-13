@@ -1,0 +1,13 @@
+.vercel
+node_modules
+.env
+utils
+command/downloader
+command/general
+command/group
+command/info
+command/misc
+command/other
+command/private
+command/weebs
+libs/menu
