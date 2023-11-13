@@ -1,4 +1,4 @@
-const { ApiHelper } = require('../Helper/ApiHelper');
+const { ApiHelper } = require('../helper/ApiHelper.js');
 
 class CommandBase {
     constructor(bot) {
