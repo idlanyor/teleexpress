@@ -1,18 +1,18 @@
-const TelegramBot = require('node-telegram-bot-api');
-const express = require('express');
-const { CommandHandler } = require('./CommandHandler');
+import TelegramBot from 'node-telegram-bot-api';
+import express, { json } from 'express';
+import { CommandHandler } from './CommandHandler.js';
 
 class BotHandler {
     constructor() {
-        this.TOKEN = process.env.TELEGRAM_TOKEN || '6613074155:AAETKFvXS5Zo1QreKUaWaYUYijii7DQZEAg';
-        this.url = process.env.URL_WEBHOOK || 'https://stork-current-verbally.ngrok-free.app';
+        this.TOKEN = '6638194398:AAHeCHGgAe3qbMLzi5jwWk1ApMph24A-KkQ';
+        this.url = 'https://0051-36-73-33-108.ngrok-free.app';
         this.port = process.env.PORT || 3000;
 
         this.bot = new TelegramBot(this.TOKEN, { polling: false });
         this.bot.setWebHook(`${this.url}/bot${this.TOKEN}`);
 
         this.app = express();
-        this.app.use(express.json());
+        this.app.use(json());
 
         this.commandHandler = new CommandHandler(this.bot);
 
@@ -30,4 +30,4 @@ class BotHandler {
     }
 }
 
-module.exports = BotHandler;
+export default BotHandler;

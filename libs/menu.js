@@ -1,4 +1,4 @@
-const menu = {
+export const menu = {
     islami: [
         "/99 asmaul husna",
         "/quran Al - quran",
@@ -40,8 +40,6 @@ const menu = {
         "/ "
     ],
 }
-module.exports = {
-    menu
-}
+
 
 // menu.islami.forEach((e) => { console.log(`/${e}`) });

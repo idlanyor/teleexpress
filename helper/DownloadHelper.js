@@ -1,16 +1,16 @@
 // Downloader.js
-const axios = require("axios").default;
-const cheerio = require("cheerio");
-const { UserAgent } = require("./index");
-const Util = require("util");
+import axios from "axios";
+import cheerio from "cheerio";
+import { UserAgent } from "./index";
+import Util from "util";
 const API_GUEST = "https://api.twitter.com/1.1/guest/activate.json";
 const API_TIMELINE = "https://api.twitter.com/2/timeline/conversation/%s.json?tweet_mode=extended";
 const AUTH =
   "Bearer AAAAAAAAAAAAAAAAAAAAANRILgAAAAAAnNwIzUejRCOuH5E6I8xnZz4puTs%3D1Zv7ttfk8LF81IUq16cHjhLTvJu4FA33AGWWjCpTnA";
 
-const igdl = require("./instagram");
+import igdl from "./instagram";
 
-const youtubeUtils = require("./youtubeUtils");
+import { getYoutubeID, validateURL } from "./youtubeUtils";
 
 // ... (kode lainnya)
 
@@ -25,8 +25,8 @@ class Downloader extends igdl {
   async yt(url, type) {
     try {
       // Gunakan fungsi-fungsi YouTube dari youtubeUtils
-      const videoId = youtubeUtils.getYoutubeID(url);
-      const isValidUrl = youtubeUtils.validateURL(url);
+      const videoId = getYoutubeID(url);
+      const isValidUrl = validateURL(url);
       // Lanjutkan dengan proses sesuai kebutuhan
       // ...
 
@@ -50,4 +50,4 @@ class Downloader extends igdl {
   // ... (kode lainnya)
 }
 
-module.exports = Downloader;
+export default Downloader;

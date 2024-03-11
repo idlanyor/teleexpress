@@ -1,4 +1,4 @@
-const BotHandler = require('./handler/BotHandler');
+import BotHandler from './handler/BotHandler.js';
 
 // Inisialisasi BotHandler
 new BotHandler();

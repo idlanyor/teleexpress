@@ -1,4 +1,4 @@
-const axios = require('axios');
+import axios from 'axios';
 
 async function getMhs(nim) {
     const url = `https://api-frontend.kemdikbud.go.id/hit_mhs/${nim}`;
@@ -53,6 +53,6 @@ async function mhs() {
     let bioMhs = await getBioMhs('SSI202203088')
     let studiMhs = await getStudiMhs('SSI202203088')
     let statusMhs = await getStatusMhs('SSI202203088')
-    // console.log(statusMhs);
+    console.log(statusMhs);
 }
 mhs()

@@ -1,7 +1,7 @@
-const axios = require('axios');
-const cheerio = require('cheerio');
+import axios from 'axios';
+import { load } from 'cheerio';
 
-class ApiHelper {
+export class ApiHelper {
     constructor() {
         let apikey = "nyanpasuu";
         let url = 'https://api.lolhuman.xyz/api/'
@@ -28,8 +28,8 @@ class ApiHelper {
      */
     async scrapeData(url, selector) {
         try {
-            const response = await axios.get(url);
-            const $ = cheerio.load(response.data);
+            const response = await get(url);
+            const $ = load(response.data);
             const scrapedData = $(selector).text();
             return scrapedData;
         } catch (error) {
@@ -41,4 +41,4 @@ class ApiHelper {
     // Tambahkan method lain sesuai kebutuhan
 }
 
-module.exports = { ApiHelper };
+// export default { ApiHelper };

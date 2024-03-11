@@ -1,6 +1,6 @@
-const { CommandBase } = require("./CommandBase");
+import { CommandBase } from "./CommandBase.js";
 
-class Islami extends CommandBase {
+export class Islami extends CommandBase {
     constructor(bot) {
         super(bot);
         this.bot.onText(/\/99/, (msg) => this.asmaulHusna(msg));
@@ -47,6 +47,5 @@ class Islami extends CommandBase {
         }
     }
 }
-module.exports = { Islami }
 
 
