@@ -4,8 +4,8 @@ import { CommandHandler } from './CommandHandler.js';
 
 class BotHandler {
     constructor() {
-        this.TOKEN = '6638194398:AAHeCHGgAe3qbMLzi5jwWk1ApMph24A-KkQ';
-        this.url = 'https://0051-36-73-33-108.ngrok-free.app';
+        this.TOKEN = process.env.TOKEN_BOT;
+        this.url = process.env.URL_HOOK;
         this.port = process.env.PORT || 3000;
 
         this.bot = new TelegramBot(this.TOKEN, { polling: false });
